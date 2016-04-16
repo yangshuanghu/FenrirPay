@@ -8,15 +8,11 @@ import android.view.ViewGroup;
 import butterknife.ButterKnife;
 
 import com.fenrir.app.fenrirpay.R;
-import com.fenrir.app.fenrirpay.di.ActivityScope;
 import com.fenrir.app.fenrirpay.ui.AppComponent;
 import com.fenrir.app.fenrirpay.ui.component.DaggerScanGoodsComponent;
 import com.fenrir.app.fenrirpay.ui.component.ScanGoodsComponent;
 import com.fenrir.app.fenrirpay.ui.module.ScanGoodsModule;
 import com.fenrir.app.fenrirpay.ui.presenter.ScanGoodsPresenter;
-
-import dagger.Component;
-import dagger.Module;
 
 import javax.inject.Inject;
 
@@ -53,7 +49,8 @@ public class ScanGoodsFragment extends BaseFragment{
 
     @Override
     public void onDestroyView(){
-        super.onDestroyView(); ButterKnife.unbind(this);
+        super.onDestroyView();
+        ButterKnife.unbind(this);
     }
 
 }

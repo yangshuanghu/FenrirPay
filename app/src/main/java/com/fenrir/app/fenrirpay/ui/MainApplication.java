@@ -25,11 +25,6 @@ public class MainApplication extends Application {
                 .build();
     }
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
-    }
-
     public AppComponent getAppComponent() {
         return appComponent;
     }
