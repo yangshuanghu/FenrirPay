@@ -22,4 +22,8 @@
     <color name="color_gr6">#eeeeee</color>
     <color name="color_gr7">#fafafa</color>
     <!--Universal Color End-->
+
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_border">#ffafed44</color>
 </resources>
