@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        android:background="@drawable/app_message_custom_background">
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:text="Error Title"
+            android:textColor="@color/color_gr1"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/dialog_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:text="Error Content"
+            android:textColor="@color/color_gr2"
+            android:textSize="15sp"
+            android:lineSpacingExtra="5dp"
+
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="210dp"
+            android:layout_height="35dp"
+            android:text="Ok"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:background="@drawable/gray_button"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

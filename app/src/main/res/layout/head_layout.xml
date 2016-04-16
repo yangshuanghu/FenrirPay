@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_back_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/color_re1">
+
+        <ImageView
+            android:id="@+id/left_menu_head_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_menu"
+            android:layout_centerVertical="true"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/left_back_head_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_arrow_back"
+            android:layout_centerVertical="true"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/left_close_head_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_close"
+            android:layout_centerVertical="true"
+            android:paddingStart="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/main_title_head_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="求人検索求人検索求人検索求人検索"
+                android:textColor="@color/color_wh"
+                android:textSize="@dimen/head_view_title_text_size"
+                android:layout_marginStart="56dp" />
+
+            <TextView
+                android:id="@+id/right_text_head_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_re2"
+                tools:text="RightBtn"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/right_head_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/shadow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_view_bottom_shadow_height">
+
+        <ImageView
+            android:id="@+id/shadow_back_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView style="@style/elevation_top"/>
+
+    </FrameLayout>
+
+</LinearLayout>

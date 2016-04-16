@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.fenrir.app.fenrirpay.view.slidemenu.MenuItemView
+        android:id="@+id/search_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_back="@drawable/slide_menu_back"
+        app:icon_src="@drawable/slide_menu_search_icon"
+        app:text_color="@color/slide_menu_text_color"
+        app:item_text="@string/search_item"
+        android:layout_marginTop="8dp"/>
+
+    <com.fenrir.app.fenrirpay.view.slidemenu.MenuItemView
+        android:id="@+id/new_jobs_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_back="@drawable/slide_menu_back"
+        app:icon_src="@drawable/slide_menu_new_icon"
+        app:text_color="@color/slide_menu_text_color"
+        app:item_text="@string/new_job_item"/>
+
+    <com.fenrir.app.fenrirpay.view.slidemenu.MenuItemView
+        android:id="@+id/keep_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_back="@drawable/slide_menu_back"
+        app:icon_src="@drawable/slide_menu_keep_icon"
+        app:text_color="@color/slide_menu_text_color"
+        app:item_text="@string/keep_item"/>
+
+    <com.fenrir.app.fenrirpay.view.slidemenu.MenuItemView
+        android:id="@+id/check_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_back="@drawable/slide_menu_back"
+        app:icon_src="@drawable/slide_menu_assessment_icon"
+        app:text_color="@color/slide_menu_text_color"
+        app:item_text="@string/check_item"/>
+
+    <com.fenrir.app.fenrirpay.view.slidemenu.MenuItemView
+        android:id="@+id/resume_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_back="@drawable/slide_menu_back"
+        app:icon_src="@drawable/slide_menu_career_icon"
+        app:text_color="@color/slide_menu_text_color"
+        app:item_text="@string/resume_item"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gr3"/>
+
+    <com.fenrir.app.fenrirpay.view.slidemenu.MenuItemView
+        android:id="@+id/info_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:item_back="@drawable/slide_menu_back"
+        app:icon_src="@drawable/slide_menu_info_icon"
+        app:text_color="@color/slide_menu_text_color"
+        app:item_text="@string/info_item"/>
+
+</LinearLayout>

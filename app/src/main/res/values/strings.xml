@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FenrirPay</string>
+
+    <!--Title list Start-->
+    <string name="title_rules">商品检索</string>
+    <!--Title list End-->
+
+    <!--Slide Menu Start-->
+    <string name="search_item">求人検索</string>
+    <string name="new_job_item">新着求人</string>
+    <string name="keep_item">キープ</string>
+    <string name="check_item">年収診断</string>
+    <string name="resume_item">職務経歴書</string>
+    <string name="info_item">インフォメーション</string>
+    <!--Slide Menu End-->
+
+    <!--DialogButton Start-->
+    <string name="dialog_button_cancel">キャンセル</string>
+    <string name="dialog_button_ok">OK</string>
+    <string name="dialog_button_delete">削除</string>
+    <string name="dialog_button_save">保存</string>
+    <!--DialogButton End-->
+</resources>

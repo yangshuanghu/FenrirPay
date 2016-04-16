@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_re1</item>
+        <item name="colorPrimaryDark">@color/color_re3</item>
+        <item name="colorAccent">@color/color_re1</item>
+        <item name="textColorError">@color/color_re1</item>
+        <item name="android:windowActionModeOverlay">true</item>
+
+        <item name="android:actionBarStyle">@style/AppTheme.ActionBar</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:height">56dp</item>
+    </style>
+
+    <style name="elevation_top">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:background">@mipmap/elevation_4dp_top</item>
+    </style>
+
+</resources>
