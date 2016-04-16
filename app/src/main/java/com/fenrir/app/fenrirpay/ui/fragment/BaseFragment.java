@@ -2,6 +2,7 @@ package com.fenrir.app.fenrirpay.ui.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
@@ -29,6 +30,7 @@ public abstract class BaseFragment extends BaseManagerFragment {
     protected final String TAG = getClass().getSimpleName();
 
     @Bind(R.id.head_view_layout)
+    @Nullable
     HeadView headViewLayout;
 
     @Inject
@@ -44,6 +46,15 @@ public abstract class BaseFragment extends BaseManagerFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
+
+        initHeadView();
+
+        releaseFocus();
+    }
+
+    private void initHeadView() {
+        if(headViewLayout == null)
+            return;
 
         String customTitle = headTitle();
         if(!TextUtils.isEmpty(customTitle))
@@ -63,8 +74,6 @@ public abstract class BaseFragment extends BaseManagerFragment {
         setHeadBtns(headViewLayout);
 
         refreshDrawerLayoutEnable();
-
-        releaseFocus();
     }
 
     @Override
@@ -127,6 +136,9 @@ public abstract class BaseFragment extends BaseManagerFragment {
     }
 
     private void refreshDrawerLayoutEnable() {
+        if(headViewLayout == null)
+            return;
+
         switch (headViewLayout.getLeftBtnStatus()) {
             case HeadView.NONE:
             case HeadView.CLOSE:
@@ -141,12 +153,4 @@ public abstract class BaseFragment extends BaseManagerFragment {
                 break;
         }
     }
-
-    //    protected void startFragmentOnNewActivity(Intent intent) {
-//        super.startFragmentOnNewActivity(intent, SingleTagActivity.class);
-//    }
-//
-//    protected void startFragmentOnNewActivityForResult(Intent intent, int resultCode) {
-//        super.startFragmentOnNewActivityForResult(intent, SingleTagActivity.class, resultCode);
-//    }
 }
