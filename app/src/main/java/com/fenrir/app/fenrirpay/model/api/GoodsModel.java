@@ -9,11 +9,11 @@ import lombok.Data;
 public class GoodsModel {
     private String name;
     private String barCode;
-    private Float salePrice;
-    private Float costPrice;
-    private Float count;
+    private float salePrice;
+    private float costPrice;
+    private int count;
     private String unit;
-    private Float packageNum;
+    private int packageNum;
     private String note;
     private String className;
 }

@@ -3,6 +3,7 @@ package com.fenrir.app.fenrirpay.ui.fragment;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
@@ -128,9 +129,17 @@ public abstract class BaseFragment extends BaseManagerFragment {
         }
     }
 
-    protected <T> Observable.Transformer<T, T> showNetProgressDialog(int title){
+    protected <T> Observable.Transformer<T, T> showNetProgressDialog(){
+        return showNetProgressDialog("");
+    }
+
+    protected <T> Observable.Transformer<T, T> showNetProgressDialog(@StringRes int title){
+        return showNetProgressDialog(getResources().getString(title));
+    }
+
+    protected <T> Observable.Transformer<T, T> showNetProgressDialog(String title){
         return obs -> obs
-                .doOnSubscribe(() -> appMessageUtil.showProgressDialog(getResources().getString(title)))
+                .doOnSubscribe(() -> appMessageUtil.showProgressDialog(title))
                 .doOnError(t -> appMessageUtil.hideProgressDialog())
                 .doOnCompleted(appMessageUtil::hideProgressDialog);
     }
