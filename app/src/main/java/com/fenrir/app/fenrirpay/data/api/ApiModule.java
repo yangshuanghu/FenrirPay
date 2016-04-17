@@ -100,11 +100,9 @@ public class ApiModule {
         return builder;
     }
 
-// example:
-//
-//    @Singleton
-//    @Provides
-//    public SearchUtil provideSearchService(Retrofit retrofit){
-//        return new SearchUtil(retrofit.create(SearchService.class));
-//    }
+    @Singleton
+    @Provides
+    public SearchGoodsService provideSearchService(Retrofit retrofit){
+        return retrofit.create(SearchGoodsService.class);
+    }
 }

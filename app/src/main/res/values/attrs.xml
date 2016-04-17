@@ -23,4 +23,10 @@
         <attr name="icon_src" format="reference"/>
         <attr name="item_text" format="string"/>
     </declare-styleable>
+    <declare-styleable name="PriceTextView">
+        <attr name="ptv_price" format="float"/>
+        <attr name="ptv_unit" format="string"/>
+        <attr name="ptv_packageNum" format="integer"/>
+        <attr name="ptv_enableThruLine" format="boolean"/>
+    </declare-styleable>
 </resources>

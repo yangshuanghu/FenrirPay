@@ -3,6 +3,7 @@ package com.fenrir.app.fenrirpay.ui;
 import android.content.Context;
 
 import com.fenrir.app.fenrirpay.data.api.ApiModule;
+import com.fenrir.app.fenrirpay.data.api.SearchGoodsService;
 import com.fenrir.app.fenrirpay.data.sharedpref.SharedPrefModule;
 import com.fenrir.app.fenrirpay.model.sharedpref.SharedPrefModel;
 import com.google.gson.Gson;
@@ -27,4 +28,6 @@ public interface AppComponent {
 
 
     //API objects:
+
+    SearchGoodsService getSearchGoodsService();
 }

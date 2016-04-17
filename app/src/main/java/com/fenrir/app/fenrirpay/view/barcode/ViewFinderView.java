@@ -21,7 +21,7 @@ public class ViewFinderView extends View implements IViewFinder {
     private static final int MIN_FRAME_HEIGHT = 240;
 
     private static final float LANDSCAPE_WIDTH_RATIO = 5f/8;
-    private static final float LANDSCAPE_HEIGHT_RATIO = 5f/8;
+    private static final float LANDSCAPE_HEIGHT_RATIO = 6f/8;
     private static final int LANDSCAPE_MAX_FRAME_WIDTH = (int) (1920 * LANDSCAPE_WIDTH_RATIO); // = 5/8 * 1920
     private static final int LANDSCAPE_MAX_FRAME_HEIGHT = (int) (1080 * LANDSCAPE_HEIGHT_RATIO); // = 5/8 * 1080
 
@@ -155,7 +155,7 @@ public class ViewFinderView extends View implements IViewFinder {
     }
 
     public synchronized void updateFramingRect() {
-        Point viewResolution = new Point(getWidth(), getHeight());
+        Point viewResolution = new Point(getWidth(), getHeight() / 2);
         int width;
         int height;
         int orientation = DisplayUtils.getScreenOrientation(getContext());
@@ -168,8 +168,14 @@ public class ViewFinderView extends View implements IViewFinder {
             height = findDesiredDimensionInRange(PORTRAIT_HEIGHT_RATIO, viewResolution.y, MIN_FRAME_HEIGHT, PORTRAIT_MAX_FRAME_HEIGHT);
         }
 
+        if(viewResolution.x > viewResolution.y) {
+            width = height = findDesiredDimensionInRange(LANDSCAPE_HEIGHT_RATIO, viewResolution.y, MIN_FRAME_HEIGHT, viewResolution.y);
+        } else {
+            width = height = findDesiredDimensionInRange(LANDSCAPE_HEIGHT_RATIO, viewResolution.x, MIN_FRAME_HEIGHT, viewResolution.x);
+        }
+
         int leftOffset = (viewResolution.x - width) / 2;
-        int topOffset = (viewResolution.y - height) / 2;
+        int topOffset = (viewResolution.y - height);
         mFramingRect = new Rect(leftOffset, topOffset, leftOffset + width, topOffset + height);
     }
 

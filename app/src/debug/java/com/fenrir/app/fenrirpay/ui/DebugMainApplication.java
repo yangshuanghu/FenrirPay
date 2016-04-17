@@ -17,4 +17,11 @@ public class DebugMainApplication extends MainApplication{
 
         System.out.println("DebugMainApplication: is Debug mode");
     }
+
+    @Override
+    protected void inject() {
+        appComponent = DaggerDebugAppComponent.builder()
+                .mainAppModule(new MainAppModule(this.getApplicationContext()))
+                .build();
+    }
 }

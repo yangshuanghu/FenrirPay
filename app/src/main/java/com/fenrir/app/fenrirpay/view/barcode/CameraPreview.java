@@ -227,15 +227,15 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
             }
         }
 
-        optimalSize = null;
-        double minRatioDiff = Double.MAX_VALUE;
-        for(Camera.Size size : sizes) {
-            double ratio = (double) size.width / size.height;
-            if(Math.abs(ratio - targetRatio) < minRatioDiff) {
-                optimalSize = size;
-                minRatioDiff = Math.abs(ratio - targetRatio);
-            }
-        }
+//        optimalSize = null;
+//        double minRatioDiff = Double.MAX_VALUE;
+//        for(Camera.Size size : sizes) {
+//            double ratio = (double) size.width / size.height;
+//            if(Math.abs(ratio - targetRatio) < minRatioDiff) {
+//                optimalSize = size;
+//                minRatioDiff = Math.abs(ratio - targetRatio);
+//            }
+//        }
         return optimalSize;
     }
 

@@ -21,6 +21,20 @@
     <color name="color_gr5">#bdbdbd</color>
     <color name="color_gr6">#eeeeee</color>
     <color name="color_gr7">#fafafa</color>
+
+    <color name="color_bk1">#e3000000</color>
+    <color name="color_bk2">#bf000000</color>
+    <color name="color_bk3">#a8000000</color>
+    <color name="color_bk4">#7d000000</color>
+    <color name="color_bk5">#59000000</color>
+    <color name="color_bk6">#35000000</color>
+
+    <color name="color_wh1">#e3ffffff</color>
+    <color name="color_wh2">#bfffffff</color>
+    <color name="color_wh3">#a8ffffff</color>
+    <color name="color_wh4">#7dffffff</color>
+    <color name="color_wh5">#59ffffff</color>
+    <color name="color_wh6">#35ffffff</color>
     <!--Universal Color End-->
 
     <color name="viewfinder_mask">#60000000</color>

@@ -39,16 +39,20 @@ public class MainBaseActivity extends SlideMenuActivity {
 
     @TargetApi(23)
     private void checkCameraPermission() {
-        String permission = Manifest.permission.CAMERA;
+        String[] permissionList = new String[]{Manifest.permission.CAMERA, Manifest.permission.INTERNET};
 
-        if (!isAllowPermission(permission)) {
-            if (shouldShowRequestPermissionRationale(permission)) {
-                // 一度ユーザーがパーミッションの要求を拒否した場合
-                requestPermissions(new String[]{permission}, CAMERA_REQUEST_CODE);
-            } else {
+        for (String permission : permissionList)
+            if(!isAllowPermission(permission)) {
                 requestPermissions(new String[]{permission}, CAMERA_REQUEST_CODE);
             }
-        }
+//        if (!isAllowPermission(permission)) {
+//            if (shouldShowRequestPermissionRationale(permission)) {
+//                // 一度ユーザーがパーミッションの要求を拒否した場合
+//                requestPermissions(new String[]{permission}, CAMERA_REQUEST_CODE);
+//            } else {
+//                requestPermissions(new String[]{permission}, CAMERA_REQUEST_CODE);
+//            }
+//        }
     }
 
     private boolean isAllowPermission(String permission) {
