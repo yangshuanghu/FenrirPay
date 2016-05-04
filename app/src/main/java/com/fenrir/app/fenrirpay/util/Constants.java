@@ -6,5 +6,5 @@ package com.fenrir.app.fenrirpay.util;
 public interface Constants {
     String SHARED_PREF_FILE_NAME = "fenrir_pay_sharedpref";
 
-    String BASE_URL = "http://192.168.1.102:8080/fenrir/staff/";
+    String BASE_URL = "http://192.168.0.14:8080/fenrir/staff/";
 }
